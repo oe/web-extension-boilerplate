@@ -3,6 +3,7 @@ var webpack = require('webpack')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+// var PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
 
 var utils = {
   cssLoaders: function (options) {
@@ -108,16 +109,28 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, 'src/static/'),
-        to: path.resolve(__dirname, 'dist/static/'),
-        ignore: ['.*']
+        to: path.resolve(__dirname, 'dist/static/')
       },
       {
         context: path.resolve(__dirname, 'src/'),
         from: '**/index.html',
-        to: path.resolve(__dirname, 'dist'),
-        ignore: ['.*']
+        to: path.resolve(__dirname, 'dist')
+      },
+      {
+        from: path.resolve(__dirname, 'src/_locales/'),
+        to: path.resolve(__dirname, 'dist/_locales/')
+      },
+      {
+        from: path.resolve(__dirname, 'src/manifest.json'),
+        to: path.resolve(__dirname, 'dist/manifest.json')
       }
-    ]),
+    ], {
+      ignore: [
+        '**/.*',
+        '**/*.map',
+        '**/node_modules/*'
+      ]
+    }),
     // extract css into its own file
     new ExtractTextPlugin({
       filename: '[name].css'
@@ -150,6 +163,7 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
+    // new PrepackWebpackPlugin({})
   ])
 }
 

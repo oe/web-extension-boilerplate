@@ -9,7 +9,7 @@ export default {
   name: 'main',
   data () {
     return {
-      title: 'popup'
+      title: 'options'
     };
   }
 };

@@ -7,6 +7,15 @@ Base on [Vue](https://vuejs.org/) , [Wepack](https://webpack.github.io/) & [babe
 3. [scss](http://sass-lang.com/), [less](http://lesscss.org/), vueI18n(https://kazupon.github.io/vue-i18n/old/)(localized your app with vue instead of chrome.i18n.getMessage) integrated
 4. CI [travis](https://docs.travis-ci.com/) integrated
 
+## How to use
+Just clone this repo to your own project:
+
+```sh
+git clone https://github.com/evecalm/extension-boilerplate.git my-extension
+```
+
+then follow the following building steps
+
 ## Building Steps
 ### prepare your environment
 1. install **[nodejs](https://nodejs.org/en/download/)** on your computer

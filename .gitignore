@@ -1,7 +1,4 @@
+node_modules
 .DS_Store
-node_modules/*
-dist/
-*.log
-config.codekit3
-*.pem
-*.zip
+docs/_book
+test/

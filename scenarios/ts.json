@@ -1,0 +1,15 @@
+{ 
+  "noEscape": true,
+  "author": "Coolguy",
+  "name": "awesome-extension",
+  "description": "An awesome browser extension",
+  "router": true,
+  "vuex": true,
+  "i18n": true,
+  "vueI18n": true,
+  "language": "ts",
+  "lint": false,
+  "lintConfig": "none",
+  "tslint": true,
+  "autoInstall": false
+}

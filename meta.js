@@ -43,7 +43,7 @@ module.exports = {
       type: 'string',
       required: false,
       message: 'Project description',
-      default: 'A Vue.js project'
+      default: 'An awesome browser extension'
     },
     author: {
       when: 'isNotTest',
@@ -65,19 +65,32 @@ module.exports = {
       type: 'confirm',
       message: 'Install vue-i18n?'
     },
-    typescript: {
+    language: {
       when: 'isNotTest',
-      type: 'confirm',
-      message: 'use typescript instead of javascript?'
+      type: 'list',
+      message: 'Which language do you want to use?',
+      choices: [
+        {
+          name: 'Javascript',
+          value: 'js',
+          short: 'Javascript'
+        },
+        {
+          name: 'Typescript',
+          value: 'ts',
+          short: 'Typescript'
+        }
+      ]
     },
     lint: {
-      when: 'isNotTest && !typescript',
+      when: 'isNotTest && language == "js"',
       type: 'confirm',
       message: 'Use ESLint to lint your code?'
     },
     tslint: {
-      when: 'isNotTest && typescript',
+      when: 'isNotTest && language == "ts"',
       type: 'confirm',
+      default: false,
       message: 'Use TSLint to lint your code?'
     },
     lintConfig: {
@@ -129,9 +142,10 @@ module.exports = {
   filters: {
     '.eslintrc.js': 'lint',
     '.eslintignore': 'lint',
-    'tsconfig.json': 'tslint',
-    'tslint.json': 'tslint',
-    'src/router/**/*': 'router'
+    'tsconfig.json': 'language == "ts" && tslint',
+    'tslint.json': 'language == "ts" && tslint',
+    'src/options/router.js': 'router',
+    'src/options/store': 'vuex'
   },
   complete: function (data, { chalk }) {
     const green = chalk.green

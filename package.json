@@ -1,11 +1,13 @@
 {
   "name": "extension-boilerplate",
-  "version": "1.3.1",
+  "version": "1.0.0",
   "license": "MIT",
+  "author": "Saiya",
+  "repository": "https://github.com/evecalm/extension-boilerplate/",
   "description": "browser extension boilerplate base on vue & webpack",
   "scripts": {
-    "docs": "cd docs && gitbook serve",
-    "docs:deploy": "bash ./deploy-docs.sh"
+    "build:js": "VUE_TEMPL_TYPE=js node_modules/.bin/vue init . extension-boilerplate-js && zip -r -X extension-boilerplate-js.zip ./extension-boilerplate-js",
+    "build:ts": "VUE_TEMPL_TYPE=ts node_modules/.bin/vue init . extension-boilerplate-ts  && zip -r -X extension-boilerplate-ts.zip ./extension-boilerplate-ts"
   },
   "devDependencies": {
     "vue-cli": "^2.8.1"

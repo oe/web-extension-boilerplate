@@ -1,12 +1,8 @@
-const scenarios = [
-  'full', 
-  'full-karma-airbnb', 
-  'minimal'
-]
+const scenarios = ['js', 'ts']
 
-const index = scenarios.indexOf(process.env.VUE_TEMPL_TEST)
-
-const isTest = exports.isTest = index !== -1
+const index = scenarios.indexOf(process.env.VUE_TEMPL_TYPE)
+console.log('VUE_TEMPL_TYPE', process.env.VUE_TEMPL_TYPE)
+const isTest = (exports.isTest = index !== -1)
 
 const scenario = isTest && require(`./${scenarios[index]}.json`)
 

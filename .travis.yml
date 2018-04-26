@@ -6,9 +6,10 @@ cache:
   directories:
   - node_modules
 install:
-- yarn
+  - yarn
 script:
-- yarn run build
+  - yarn run build:js
+  - yarn run build:ts
 deploy:
   provider: releases
   api_key:

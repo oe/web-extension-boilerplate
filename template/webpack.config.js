@@ -50,14 +50,14 @@ const config = {
     publicPath: '/'
   },
   module: {
-    rules: [
-      {{#tslint}}{
+    rules: [{{#tslint}}
+      {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         enforce: 'pre',
         loader: 'tslint-loader'
       },{{/tslint}}
-      {{#typescript}}{
+      {{#if_eq language "ts"}}{
         test: /\.tsx?$/,
         exclude: /node_modules/,
         type: 'javascript/auto',
@@ -70,7 +70,7 @@ const config = {
             }
           }
         ]
-      },{{/typescript}}
+      },{{/if_eq}}
       {{#lint}}{
         test: /\.(js|vue)$/,
         enforce: 'pre',
@@ -105,12 +105,12 @@ const config = {
             })
           }
         }
-      },
-      {{#if !typescript}}{
+      },{{#if_eq language "js"}}
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
-      },{{/if}}
+      },{{/if_eq}}
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({

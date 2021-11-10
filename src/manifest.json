@@ -8,13 +8,16 @@
       "background/index.ts"
     ]
   },
-  "page_action": {
-    "default_popup": "popup/index.html"
+  "browser_action": {
+    "default_popup": "browser-action/index.html"
+  },
+  "options_ui": {
+    "page": "options/index.html"
   },
   "content_scripts": [
     {
       "matches": [
-        "http://*.github.com/*"
+        "*://*.github.com/*"
       ],
       "css": [
         "content-scripts/style.scss"
@@ -24,5 +27,8 @@
       ],
       "run_at": "document_idle"
     }
+  ],
+  "permissions": [
+    "activeTab"
   ]
 }

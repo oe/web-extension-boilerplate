@@ -9,22 +9,28 @@ Base on [Parcel](https://parceljs.org/recipes/web-extension/), an magic bundler 
 
 
 ## Building Steps
+requirements:
+- make sure you have [nodejs](https://nodejs.org/) v12.10.0 or above installed
+- install [`yarn`](https://yarnpkg.com/getting-started/install). *It's optional, you can use npm instead*
 
 ### install deps
-run `yarn` in your shell
+run `yarn`(or `npm install`) in your shell
 
 ### dev
-1. run `yarn dev` in your shell
+1. run `yarn dev`(or `npm run dev`) in your shell
 2. Open the Extension Management page by navigating to `chrome://extensions`
 3. Enable Developer Mode by clicking the toggle switch next to **Developer mode**
 4. Click the **LOAD UNPACKED** button and select the select `dist` directory
 
+Tips: if you modified  `src/manifest.json`, you may need to reload the extension(by click the refresh icon inside the extension card  in `chrome://extensions` page) to make it take effect immediately.
+
 Above are steps for chrome, if you're a firefox user, you must can figure it out yourself😄
 
 ### build
-run `yarn build` in your shell, then you will get a file `ext.zip`, that's packaged extension
+run `yarn build`(or `npm run build`) in your shell, then you will get a file `ext.zip`, that's packaged extension
 
 ## references
+* [parcel](https://parceljs.org/getting-started/webapp/)
 * [parcel for web extension](https://parceljs.org/recipes/web-extension/)
 * [Web Extension via MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
 * [Chrome extension, Manifest V2](https://developer.chrome.com/docs/extensions/mv2/getstarted/).

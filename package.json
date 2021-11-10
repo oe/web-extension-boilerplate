@@ -21,18 +21,15 @@
     "start": "parcel src/manifest.json --host localhost --target webext-dev --config @parcel/config-webextension",
     "dev": "npm run start",
     "clean": "node scripts/clean.js",
-    "zip-ext": "node scripts/zip-ext.js",
     "prebuild": "npm run clean",
-    "build": "parcel build src/manifest.json --target webext-prod --config @parcel/config-webextension",
-    "postbuild": "npm run zip-ext"
+    "build": "parcel build src/manifest.json --no-source-maps --target webext-prod --config @parcel/config-webextension",
+    "postbuild": "npm run zip-ext",
+    "zip-ext": "node scripts/zip-ext.js"
   },
   "devDependencies": {
     "@parcel/config-webextension": "^2.0.1",
     "@parcel/transformer-sass": "^2.0.1",
     "parcel": "^2.0.1",
     "zip-folder": "^1.0.0"
-  },
-  "engines": {
-    "node": ">=12.10.0"
   }
 }

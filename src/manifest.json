@@ -10,5 +10,19 @@
   },
   "page_action": {
     "default_popup": "popup/index.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.github.com/*"
+      ],
+      "css": [
+        "content-scripts/style.scss"
+      ],
+      "js": [
+        "content-scripts/index.ts"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
 }

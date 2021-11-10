@@ -1,0 +1,14 @@
+{
+  "name": "Extension-Boilerplate",
+  "description": "template for web extension",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background/index.ts"
+    ]
+  },
+  "page_action": {
+    "default_popup": "popup/index.html"
+  }
+}

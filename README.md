@@ -1,5 +1,5 @@
 # Browser extension boilerplate
-Base on [Vue](https://vuejs.org/) , [Wepack](https://webpack.github.io/) & [babel](https://babeljs.io/)(so you can write your extension with es6) . *current only tested on Chrome*
+Base on [Parcel](https://parceljs.org/recipes/web-extension/), an magic bundler that support all technology you familiar with(react/vue/typescript, etc), supports the standard [Web Extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) APIs, for chrome that's [Manifest V2](https://developer.chrome.com/docs/extensions/mv2/getstarted/).
 
 ## Features
 1. dev mode, autorefresh when developing, without concern about [CSP](https://developer.chrome.com/extensions/contentSecurityPolicy)

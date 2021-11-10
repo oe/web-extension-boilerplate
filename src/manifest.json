@@ -1,0 +1,34 @@
+{
+  "name": "Extension-Boilerplate",
+  "description": "template for web extension",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background/index.ts"
+    ]
+  },
+  "browser_action": {
+    "default_popup": "browser-action/index.html"
+  },
+  "options_ui": {
+    "page": "options/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.github.com/*"
+      ],
+      "css": [
+        "content-scripts/style.scss"
+      ],
+      "js": [
+        "content-scripts/index.ts"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}

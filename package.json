@@ -1,15 +1,35 @@
 {
   "name": "extension-boilerplate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "author": "Saiya",
   "repository": "https://github.com/evecalm/extension-boilerplate/",
   "description": "browser extension boilerplate base on vue & webpack",
+  "targets": {
+    "webext-dev": {
+      "sourceMap": {
+        "inline": true,
+        "inlineSources": true
+      },
+      "distDir": "./dist"
+    },
+    "webext-prod": {
+      "distDir": "./dist"
+    }
+  },
   "scripts": {
-    "build:js": "VUE_TEMPL_TYPE=js node_modules/.bin/vue init . extension-boilerplate-js && zip -r -X extension-boilerplate-js.zip ./extension-boilerplate-js",
-    "build:ts": "VUE_TEMPL_TYPE=ts node_modules/.bin/vue init . extension-boilerplate-ts  && zip -r -X extension-boilerplate-ts.zip ./extension-boilerplate-ts"
+    "start": "parcel src/manifest.json --host localhost --target webext-dev --config @parcel/config-webextension",
+    "dev": "npm run start",
+    "clean": "node scripts/clean.js",
+    "prebuild": "npm run clean",
+    "build": "parcel build src/manifest.json --no-source-maps --target webext-prod --config @parcel/config-webextension",
+    "postbuild": "npm run zip-ext",
+    "zip-ext": "node scripts/zip-ext.js"
   },
   "devDependencies": {
-    "vue-cli": "^2.8.1"
+    "@parcel/config-webextension": "^2.0.1",
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1",
+    "zip-folder": "^1.0.0"
   }
 }

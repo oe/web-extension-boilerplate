@@ -18,8 +18,8 @@
     }
   },
   "scripts": {
-    "start": "parcel src/manifest.json --host localhost --target webext-dev --config @parcel/config-webextension",
-    "dev": "npm run start",
+    "start": "npm run dev",
+    "dev": "parcel watch src/manifest.json --host localhost --target webext-dev --config @parcel/config-webextension",
     "clean": "node scripts/clean.js",
     "prebuild": "npm run clean",
     "build": "parcel build src/manifest.json --no-source-maps --target webext-prod --config @parcel/config-webextension",
@@ -31,5 +31,8 @@
     "@parcel/transformer-sass": "^2.10.3",
     "parcel": "^2.10.3",
     "zip-folder": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=12.10.0"
   }
 }

@@ -1,9 +1,10 @@
 body {
   min-width: 300px;
   min-height: 200px;
-  background-color: lightblue;
+  background-color: #efefef;
 }
-div {
+#root {
+  padding-top: 80px;
   font-size: large;
   text-align: center;
 }

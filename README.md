@@ -1,5 +1,5 @@
 # Browser extension boilerplate
-Base on [Parcel](https://parceljs.org/recipes/web-extension/), an magic bundler that supports all technologies you familiar with(react/vue/typescript/less/scss, etc), supports the standard [Web Extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) APIs, for chrome that's [Manifest V2](https://developer.chrome.com/docs/extensions/mv2/getstarted/).
+Base on [Parcel](https://parceljs.org/recipes/web-extension/), an magic bundler that supports all technologies you familiar with(react/vue/typescript/less/scss, etc), supports the standard [Web Extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) APIs, for chrome that's [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/getstarted/).
 
 ## Features
 1. dev mode, autorefresh when developing, without concern about [CSP](https://developer.chrome.com/extensions/contentSecurityPolicy)
@@ -33,4 +33,4 @@ run `yarn build`(or `npm run build`) in your shell, then you will get a file `ex
 * [parcel](https://parceljs.org/getting-started/webapp/)
 * [parcel for web extension](https://parceljs.org/recipes/web-extension/)
 * [Web Extension via MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
-* [Chrome extension, Manifest V2](https://developer.chrome.com/docs/extensions/mv2/getstarted/).
+* [Chrome extension, Manifest V3](https://developer.chrome.com/docs/extensions/mv3/getstarted/).

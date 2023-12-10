@@ -2,13 +2,11 @@
   "name": "Extension-Boilerplate",
   "description": "template for web extension",
   "version": "1.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "background": {
-    "scripts": [
-      "background/index.ts"
-    ]
+    "service_worker": "background/index.ts"
   },
-  "browser_action": {
+  "action": {
     "default_popup": "browser-action/index.html"
   },
   "options_ui": {

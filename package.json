@@ -14,7 +14,8 @@
       "distDir": "./dist"
     },
     "webext-prod": {
-      "distDir": "./dist"
+      "distDir": "./dist",
+      "sourceMap": false
     }
   },
   "scripts": {
@@ -22,7 +23,7 @@
     "dev": "parcel watch src/manifest.json --host localhost --target webext-dev --config @parcel/config-webextension",
     "clean": "node scripts/clean.js",
     "prebuild": "npm run clean",
-    "build": "parcel build src/manifest.json --no-source-maps --target webext-prod --config @parcel/config-webextension",
+    "build": "parcel build src/manifest.json --target webext-prod --config @parcel/config-webextension",
     "postbuild": "npm run zip-ext",
     "zip-ext": "node scripts/zip-ext.js"
   },

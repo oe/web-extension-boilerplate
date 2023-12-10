@@ -29,6 +29,7 @@
   "devDependencies": {
     "@parcel/config-webextension": "^2.10.3",
     "@parcel/transformer-sass": "^2.10.3",
+    "chrome-types": "^0.1.246",
     "parcel": "^2.10.3",
     "zip-folder": "^1.0.0"
   },

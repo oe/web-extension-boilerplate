@@ -1,40 +1,50 @@
 {
-  "name": "extension-boilerplate",
+  "name": "web-extension-boilerplate",
   "version": "2.0.0",
   "license": "MIT",
   "author": "Saiya",
-  "repository": "https://github.com/evecalm/extension-boilerplate/",
-  "description": "browser extension boilerplate base on vue & webpack",
+  "repository": "https://github.com/oe/web-extension-boilerplate/",
+  "description": "browser extension boilerplate base on parcel",
   "targets": {
     "webext-dev": {
       "sourceMap": {
         "inline": true,
         "inlineSources": true
       },
-      "distDir": "./dist"
+      "distDir": "./dist",
+      "context": "browser"
     },
     "webext-prod": {
       "distDir": "./dist",
-      "sourceMap": false
+      "sourceMap": false,
+      "context": "browser"
     }
   },
   "scripts": {
-    "start": "npm run dev",
-    "dev": "parcel watch src/manifest.json --host localhost --target webext-dev --config @parcel/config-webextension",
+    "start": "yarn run dev",
+    "predev": "yarn run clean",
+    "dev": "parcel watch src/manifest.json --host localhost --port 7891 --target webext-dev --config @parcel/config-webextension",
     "clean": "node scripts/clean.js",
-    "prebuild": "npm run clean",
+    "prebuild": "yarn run clean",
     "build": "parcel build src/manifest.json --target webext-prod --config @parcel/config-webextension",
-    "postbuild": "npm run zip-ext",
+    "postbuild": "yarn run zip-ext",
     "zip-ext": "node scripts/zip-ext.js"
   },
   "devDependencies": {
     "@parcel/config-webextension": "^2.10.3",
     "@parcel/transformer-sass": "^2.10.3",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
     "chrome-types": "^0.1.246",
     "parcel": "^2.10.3",
+    "process": "^0.11.10",
     "zip-folder": "^1.0.0"
   },
   "engines": {
     "node": ">=12.10.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

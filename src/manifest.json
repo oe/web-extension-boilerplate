@@ -13,6 +13,9 @@
     "page": "options/index.html",
     "open_in_tab": true
   },
+  "side_panel": {
+    "default_path": "side-panel/index.html"
+  },
   "content_scripts": [
     {
       "matches": [
@@ -28,6 +31,7 @@
     }
   ],
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "sidePanel"
   ]
 }

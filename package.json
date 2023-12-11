@@ -23,10 +23,10 @@
   "scripts": {
     "start": "yarn run dev",
     "predev": "yarn run clean",
-    "dev": "parcel watch src/manifest.json --host localhost --port 7891 --target webext-dev --config @parcel/config-webextension",
+    "dev": "parcel watch src/manifest.json --host localhost --port 7891 --target webext-dev --no-cache --config @parcel/config-webextension",
     "clean": "node scripts/clean.js",
     "prebuild": "yarn run clean",
-    "build": "parcel build src/manifest.json --target webext-prod --config @parcel/config-webextension",
+    "build": "parcel build src/manifest.json --target webext-prod --no-cache --config @parcel/config-webextension",
     "postbuild": "yarn run zip-ext",
     "zip-ext": "node scripts/zip-ext.js"
   },

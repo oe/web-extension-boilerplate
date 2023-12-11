@@ -10,7 +10,7 @@
     "default_popup": "browser-action/index.html"
   },
   "options_ui": {
-    "page": "options/index.html",
+    "page": "options-ui/index.html",
     "open_in_tab": true
   },
   "side_panel": {

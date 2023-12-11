@@ -189,7 +189,7 @@
     "@parcel/transformer-raw" "2.10.3"
     "@parcel/transformer-webextension" "2.10.3"
 
-"@parcel/core@2.10.3":
+"@parcel/core@2.10.3", "@parcel/core@^2.10.3":
   version "2.10.3"
   resolved "https://registry.yarnpkg.com/@parcel/core/-/core-2.10.3.tgz#3de309cb71a6094f0c1e26634804128054c11d02"
   integrity sha512-b64FdqJi4CX6iWeLZNfmwdTrC1VLPXHMuFusf1sTZTuRBFw2oRpgJvuiqsrInaZ82o3lbLMo4a9/5LtNaZKa+Q==

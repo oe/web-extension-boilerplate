@@ -40,11 +40,14 @@
     "process": "^0.11.10",
     "zip-folder": "^1.0.0"
   },
-  "engines": {
-    "node": ">=12.10.0"
-  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true
+  },
+  "engines": {
+    "node": ">=12.10.0"
   }
 }

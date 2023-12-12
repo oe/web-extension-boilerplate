@@ -2,9 +2,9 @@
 Base on [Parcel](https://parceljs.org/recipes/web-extension/), an magic bundler that supports all technologies you familiar with(react/vue/typescript/less/scss, etc), supports the standard [Web Extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) APIs, for chrome that's [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/getstarted/).
 
 ## Features
-1. dev mode, autorefresh when developing, without concern about [CSP](https://developer.chrome.com/extensions/contentSecurityPolicy)
+1. dev mode, autorefresh when developing, without concern about [CSP](https://developer.chrome.com/docs/extensions/reference/manifest/content-security-policy)
 2. build script, auto pack your extension
-3. [scss](http://sass-lang.com/), [less](http://lesscss.org/), vueI18n(https://kazupon.github.io/vue-i18n/old/)(localized your app with vue instead of chrome.i18n.getMessage) integrated
+3. [scss](http://sass-lang.com/), [less](http://lesscss.org/), [vueI18n](https://kazupon.github.io/vue-i18n/old/)(localized your app with vue instead of chrome.i18n.getMessage) integrated
 4. CI [github actions](https://docs.github.com/en/actions) integrated, you can download artifact in when workflow done
 
 
